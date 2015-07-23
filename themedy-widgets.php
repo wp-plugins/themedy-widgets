@@ -3,7 +3,7 @@
 Plugin Name: Themedy Widgets
 Plugin URI: http://themedy.com
 Description: A selection of widgets to extend your Themedy site even further.
-Version: 1.0.1
+Version: 1.0.2
 Author: Themedy
 Author URI: http://themedy.com
 */
