@@ -34,7 +34,12 @@ function themedy_widget_setup() {
 	}
 	if ( !class_exists( 'themedy_ad300x600_widget' )) {
 		include('includes/widgets/widget-ad300x600.php');
-
+	}
+	if ( !class_exists( 'themedy_ad468x60_widget' )) {
+		include('includes/widgets/widget-ad468x60.php');
+	}
+	if ( !class_exists( 'themedy_ad620x100_widget' )) {
+		include('includes/widgets/widget-ad620x100.php');
 	}
 	if ( !class_exists( 'themedy_flickr_widget' )) {
 		include('includes/widgets/widget-flickr.php');
