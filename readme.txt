@@ -2,8 +2,8 @@
 Contributors: themedy, mahodder, matthodder
 Tags: shortcodes, themedy, genesis, thesis, ad widget, flickr widget, vimeo widget, video widget
 Requires at least: 4.1
-Tested up to: 4.2.2
-Stable tag: 1.0.1
+Tested up to: 4.2.3
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,7 +11,7 @@ These widgets extend the functionality of our Themedy Themes.
 
 == Description ==
 
-Themedy Widgets include five ad widgets, a Flickr widget and a video widget for use in your Themedy sites.
+Themedy Widgets include five ad widgets, a Flickr widget, tabbed widget and a video widget for use in your Themedy sites.
 
 There is no options page, just activate and checkout your new widgts in your WordPress widgets section!
 
@@ -24,6 +24,9 @@ Please note that this plugin will work outside our <a href="http://themedy.com">
 3. Go to the WordPress widget section to find your new widgets!
 
 == Changelog ==
+
+= 1.0.2 =
+* Add tabbed widget
 
 = 1.0.1 =
 * Add more checks to decide which widgets to activate
