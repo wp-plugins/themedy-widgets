@@ -26,7 +26,7 @@ class themedy_video_widget extends WP_Widget {
 	/* -------- Widget setup -------- */
 	/* ---------------------------- */
 	
-	function Themedy_Video_Widget() {
+	function __construct() {
 	
 		/* Widget settings. */
 		$widget_ops = array( 'classname' => 'themedy_video_widget', 'description' => __('A widget that displays your YouTube or Vimeo Video.', 'themedy') );
@@ -35,7 +35,7 @@ class themedy_video_widget extends WP_Widget {
 		$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'themedy_video_widget' );
 
 		/* Create the widget. */
-		$this->WP_Widget( 'themedy_video_widget', __('Themedy - Video Widget', 'themedy'), $widget_ops, $control_ops );
+		parent::__construct( 'themedy_video_widget', __('Themedy - Video Widget', 'themedy'), $widget_ops, $control_ops );
 	}
 
 	/* ---------------------------- */

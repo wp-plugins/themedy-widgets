@@ -26,7 +26,7 @@ class themedy_ad120x60_widget extends WP_Widget {
 	/* -------- Widget setup -------- */
 	/* ---------------------------- */
 	
-	function Themedy_Ad120x60_Widget() {
+	function __construct() {
 	
 		/* Widget settings */
 		$widget_ops = array( 'classname' => 'themedy_ad120x60_widget', 'description' => __('A widget that allows the display and configuration of of a single 120x60 Banner.', 'themedy') );
@@ -35,7 +35,7 @@ class themedy_ad120x60_widget extends WP_Widget {
 		//$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'themedy_ad300_widget' );
 
 		/* Create the widget */
-		$this->WP_Widget( 'themedy_ad120x60_widget', __('Themedy - 120x60 Ad', 'themedy'), $widget_ops );
+		parent::__construct( 'themedy_ad120x60_widget', __('Themedy - 120x60 Ad', 'themedy'), $widget_ops );
 	}
 
 	/* ---------------------------- */

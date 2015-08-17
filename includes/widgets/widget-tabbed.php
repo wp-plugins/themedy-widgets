@@ -50,13 +50,13 @@ class themedy_tab_widget extends WP_Widget {
 	/* -------- Widget setup -------- */
 	/* ---------------------------- */
 
-	function Themedy_tab_Widget() {
+	function __construct() {
 
 		/* Widget settings */
 		$widget_ops = array( 'classname' => 'themedy_tab_widget', 'description' => __('A tabbed widget that display popular posts, recent posts, comments and tags.', 'themedy') );
 
 		/* Create the widget */
-		$this->WP_Widget( 'themedy_tab_widget', __('Themedy - Tabbed Widget', 'themedy'), $widget_ops );
+		parent::__construct( 'themedy_tab_widget', __('Themedy - Tabbed Widget', 'themedy'), $widget_ops );
 	}
 
 	/* ---------------------------- */

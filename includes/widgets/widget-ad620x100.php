@@ -26,7 +26,7 @@ class themedy_ad620_widget extends WP_Widget {
 	/* -------- Widget setup -------- */
 	/* ---------------------------- */
 	
-	function themedy_ad620_widget() {
+	function __construct() {
 	
 		/* Widget settings */
 		$widget_ops = array( 'classname' => 'themedy_ad620_widget', 'description' => __('A widget that allows the display and configuration of of a single 620x100 Banner.', 'themedy') );
@@ -35,7 +35,7 @@ class themedy_ad620_widget extends WP_Widget {
 		//$control_ops = array( 'width' => 468, 'height' => 350, 'id_base' => 'themedy_ad620_widget' );
 
 		/* Create the widget */
-		$this->WP_Widget( 'themedy_ad620_widget', __('Themedy - 620x100 Ad', 'themedy'), $widget_ops );
+		parent::__construct( 'themedy_ad620_widget', __('Themedy - 620x100 Ad', 'themedy'), $widget_ops );
 	}
 
 	/* ---------------------------- */

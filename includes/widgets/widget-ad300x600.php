@@ -26,7 +26,7 @@ class themedy_ad300x600_widget extends WP_Widget {
 	/* -------- Widget setup -------- */
 	/* ---------------------------- */
 	
-	function Themedy_Ad300x600_Widget() {
+	function __construct() {
 	
 		/* Widget settings */
 		$widget_ops = array( 'classname' => 'themedy_ad300x600_widget', 'description' => __('A widget that allows the display and configuration of of a single 300x600 Banner (Half Page Ad).', 'themedy') );
@@ -35,7 +35,7 @@ class themedy_ad300x600_widget extends WP_Widget {
 		//$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'themedy_ad300_widget' );
 
 		/* Create the widget */
-		$this->WP_Widget( 'themedy_ad300x600_widget', __('Themedy - 300x600 Ad', 'themedy'), $widget_ops );
+		parent::__construct( 'themedy_ad300x600_widget', __('Themedy - 300x600 Ad', 'themedy'), $widget_ops );
 	}
 
 	/* ---------------------------- */

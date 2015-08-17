@@ -26,13 +26,13 @@ class themedy_flickr_widget extends WP_Widget {
 	/* -------- Widget setup -------- */
 	/* ---------------------------- */
 	
-	function Themedy_FLICKR_Widget() {
+	function __construct() {
 	
 		/* Widget settings. */
 		$widget_ops = array( 'classname' => 'themedy_flickr_widget', 'description' => __('A widget that displays your Flickr photos.', 'themedy') );
 
 		/* Create the widget. */
-		$this->WP_Widget( 'themedy_flickr_widget', __('Themedy - Flickr Photos', 'themedy'), $widget_ops );
+		parent::__construct( 'themedy_flickr_widget', __('Themedy - Flickr Photos', 'themedy'), $widget_ops );
 	}
 
 	/* ---------------------------- */

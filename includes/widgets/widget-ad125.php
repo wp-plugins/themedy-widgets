@@ -26,7 +26,7 @@ class themedy_ad_widget extends WP_Widget {
 	/* -------- Widget setup -------- */
 	/* ---------------------------- */
 	
-	function Themedy_Ad_Widget() {
+	function __construct() {
 	
 		/* Widget settings */
 		$widget_ops = array( 'classname' => 'themedy_ad_widget', 'description' => __('A widget that allows the display and configuration of up to six 125x125 Banners.', 'themedy') );
@@ -35,7 +35,7 @@ class themedy_ad_widget extends WP_Widget {
 		$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'themedy_ad_widget' );
 
 		/* Create the widget */
-		$this->WP_Widget( 'themedy_ad_widget', __('Themedy - 125x125 Ads', 'themedy'), $widget_ops );
+		parent::__construct( 'themedy_ad_widget', __('Themedy - 125x125 Ads', 'themedy'), $widget_ops );
 	}
 
 	/* ---------------------------- */
