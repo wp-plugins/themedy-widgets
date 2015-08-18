@@ -7,6 +7,9 @@
 	 }
 	
 	 function widget($args, $instance) {
+		 $themedy_widgets_path = dirname(__FILE__);
+		 $themedy_widgets_main_file = dirname(__FILE__).'/widget-social.php';
+		 $themedy_widgets_directory = plugin_dir_url($themedy_widgets_main_file);
 		 extract($args, EXTR_SKIP);
 		 echo $before_widget;
 		 $title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']);
@@ -17,10 +20,10 @@
 		
 		 if ( !empty( $title ) ) { echo $before_title . $title . $after_title; }; ?>
          <div class="social_list">
-		 	<?php if ($facebook_link) { ?><a href="<?php echo $facebook_link; ?>" class="hastip" title="Facebook"><img src="<?php echo CHILD_URL; ?>/images/icon-facebook.png" alt="Facebook" /></a><?php } ?>
-			<?php if ($twitter_link) { ?><a href="<?php echo $twitter_link; ?>" class="hastip" title="Twitter"><img src="<?php echo CHILD_URL; ?>/images/icon-twitter.png" alt="Twitter" /></a><?php } ?>
-			<?php if ($mail_link) { ?><a href="<?php echo $mail_link; ?>" class="hastip" title="Mail"><img src="<?php echo CHILD_URL; ?>/images/icon-mail.png" alt="Mail" /></a><?php } ?>
-            <?php if ($rss_link) { ?><a href="<?php echo $rss_link; ?>" class="hastip" title="RSS"><img src="<?php echo CHILD_URL; ?>/images/icon-rss.png" alt="RSS" /></a><?php } ?>    
+		 	<?php if ($facebook_link) { ?><a href="<?php echo $facebook_link; ?>" class="hastip" title="Facebook"><img src="<?php echo $themedy_widgets_directory; ?>images/icon-facebook.png" alt="Facebook" /></a><?php } ?>
+			<?php if ($twitter_link) { ?><a href="<?php echo $twitter_link; ?>" class="hastip" title="Twitter"><img src="<?php echo $themedy_widgets_directory; ?>images/icon-twitter.png" alt="Twitter" /></a><?php } ?>
+			<?php if ($mail_link) { ?><a href="<?php echo $mail_link; ?>" class="hastip" title="Mail"><img src="<?php echo $themedy_widgets_directory; ?>images/icon-mail.png" alt="Mail" /></a><?php } ?>
+            <?php if ($rss_link) { ?><a href="<?php echo $rss_link; ?>" class="hastip" title="RSS"><img src="<?php echo $themedy_widgets_directory; ?>images/icon-rss.png" alt="RSS" /></a><?php } ?>    
         </div>
 		
 		 <?php echo $after_widget;
@@ -55,13 +58,6 @@
 	 }
 	}
 	
-	add_action('wp_print_scripts', 'social_list_widget_scripts');
-	function social_list_widget_scripts() {
-		if (!is_admin()) {
-			wp_enqueue_script('tooltipsy', CHILD_URL.'/lib/js/tooltipsy.js', array('jquery'), '1.0', TRUE);
-		}
-	}
-
 	add_action('init', 'themedy_social_enqueue');
 	function themedy_social_enqueue() {
 		/* Paths */
