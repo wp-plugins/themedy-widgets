@@ -2,8 +2,8 @@
 Contributors: themedy, mahodder, matthodder
 Tags: shortcodes, themedy, genesis, thesis, ad widget, flickr widget, vimeo widget, video widget
 Requires at least: 4.1
-Tested up to: 4.2.3
-Stable tag: 1.0.2
+Tested up to: 4.3
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,9 @@ Please note that this plugin will work outside our <a href="http://themedy.com">
 3. Go to the WordPress widget section to find your new widgets!
 
 == Changelog ==
+
+= 1.0.3 =
+* Update for WordPress 4.3
 
 = 1.0.2 =
 * Add tabbed widget
