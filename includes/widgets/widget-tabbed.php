@@ -17,8 +17,8 @@ function themedy_tab_widgets() {
 	register_widget( 'Themedy_Tab_Widget' );
 }
 
-add_action('init', 'enqueue');
-function enqueue() {
+add_action('init', 'themedy_tabbed_enqueue');
+function themedy_tabbed_enqueue() {
 	/* Paths */
 	$themedy_widgets_path = dirname(__FILE__);
 	$themedy_widgets_main_file = dirname(__FILE__).'/widget-tabbed.php';

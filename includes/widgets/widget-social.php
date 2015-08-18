@@ -62,8 +62,8 @@
 		}
 	}
 
-	add_action('init', 'enqueue');
-	function enqueue() {
+	add_action('init', 'themedy_social_enqueue');
+	function themedy_social_enqueue() {
 		/* Paths */
 		$themedy_widgets_path = dirname(__FILE__);
 		$themedy_widgets_main_file = dirname(__FILE__).'/widget-social.php';
